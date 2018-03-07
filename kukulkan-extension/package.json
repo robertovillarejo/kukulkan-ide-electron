@@ -1,0 +1,31 @@
+{
+  "name": "kukulkan-extension",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "latest"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "copy-ls": "rm -rf ./build && mkdir build && cp ../mx.infotec.dads.kukulkan.parent/mx.infotec.dads.kukulkan.ide/build/libs/mx.infotec.dads.kukulkan.ide-1.0.0-SNAPSHOT-ls.jar ./build/dsl-ls.jar",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "backend": "lib/node/kukulkan-backend-module",
+      "frontend": "lib/browser/kukulkan-frontend-module"
+    }
+  ]
+}
