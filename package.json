@@ -1,9 +1,9 @@
 {
-  "name": "electron-forge-app",
+  "name": "kukulkan-ide",
   "private": true,
-  "productName": "electron-forge-app",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "productName": "kukulkan-ide",
+  "version": "0.0.1",
+  "description": "The Kukulkan IDE",
   "main": "src-gen/frontend/electron-main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -35,7 +35,7 @@
         "packageManager": "yarn"
       },
       "electronWinstallerConfig": {
-        "name": "electron_forge_app"
+        "name": "kukulkan_ide"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
@@ -45,7 +45,7 @@
       },
       "windowsStoreConfig": {
         "packageName": "",
-        "name": "electronforgeapp"
+        "name": "kukulkanide"
       }
     }
   },
