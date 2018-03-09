@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# build files
+lib/
+out/
+src-gen/
+webpack.config.js
