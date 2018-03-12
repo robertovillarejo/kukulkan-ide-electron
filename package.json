@@ -7,7 +7,7 @@
   "main": "src-gen/frontend/electron-main.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
+    "package": "yarn run build && electron-builder",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint src --color",
@@ -21,7 +21,7 @@
     "forge": {
       "make_targets": {
         "win32": [
-          "squirrel"
+          "wix"
         ],
         "darwin": [
           "zip"
@@ -53,6 +53,7 @@
     "@theia/core": "latest",
     "@theia/editor": "latest",
     "@theia/filesystem": "latest",
+    "@theia/git": "latest",
     "@theia/languages": "latest",
     "@theia/markers": "latest",
     "@theia/messages": "latest",
@@ -63,7 +64,6 @@
     "@theia/terminal": "latest",
     "@theia/typescript": "latest",
     "@theia/workspace": "latest",
-    "@theia/git": "latest",
     "electron-compile": "6.4.2",
     "electron-squirrel-startup": "1.0.0",
     "kukulkan-extension": "0.0.0"
@@ -73,6 +73,7 @@
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
+    "electron-builder": "^20.4.1",
     "electron-forge": "5.1.1",
     "electron-prebuilt-compile": "1.8.2",
     "eslint": "^3",
@@ -85,5 +86,7 @@
   "theia": {
     "target": "electron"
   },
-  "workspaces": ["kukulkan-extension"]
+  "workspaces": [
+    "kukulkan-extension"
+  ]
 }
