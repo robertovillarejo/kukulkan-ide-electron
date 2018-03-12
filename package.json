@@ -37,7 +37,14 @@
       "electronWinstallerConfig": {
         "name": "kukulkan_ide"
       },
-      "electronInstallerDebian": {},
+      "electronInstallerDebian": {
+        "options": {
+          "icon": "./resources/Icon.png",
+          "categories": [
+            "Development"
+          ]
+        }
+      },
       "electronInstallerRedhat": {},
       "github_repository": {
         "owner": "",
@@ -85,5 +92,7 @@
   "theia": {
     "target": "electron"
   },
-  "workspaces": ["kukulkan-extension"]
+  "workspaces": [
+    "kukulkan-extension"
+  ]
 }
