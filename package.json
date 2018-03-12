@@ -7,7 +7,8 @@
   "main": "src-gen/frontend/electron-main.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "yarn run build && electron-builder",
+    "package": "electron-forge package",
+    "package:win": "yarn run build && electron-builder",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint src --color",
