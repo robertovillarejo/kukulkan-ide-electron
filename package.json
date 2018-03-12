@@ -63,6 +63,7 @@
     "@theia/terminal": "latest",
     "@theia/typescript": "latest",
     "@theia/workspace": "latest",
+    "@theia/git": "latest",
     "electron-compile": "6.4.2",
     "electron-squirrel-startup": "1.0.0",
     "kukulkan-extension": "0.0.0"
