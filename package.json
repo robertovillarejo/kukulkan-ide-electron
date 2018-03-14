@@ -6,57 +6,19 @@
   "description": "The Kukulkan IDE",
   "main": "src-gen/frontend/electron-main.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "package:win": "yarn run build && electron-builder",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "start": "theia start",
+    "package": "ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true electron-builder",
     "lint": "eslint src --color",
     "prepare": "theia build",
-    "watch": "theia build --watch"
+    "watch": "theia build --watch",
+    "rebuild": "electron-rebuild"
   },
   "keywords": [],
-  "author": "roberto",
-  "license": "MIT",
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "wix"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "yarn"
-      },
-      "electronWinstallerConfig": {
-        "name": "kukulkan_ide"
-      },
-      "electronInstallerDebian": {
-        "options": {
-          "icon": "./resources/Icon.png",
-          "categories": [
-            "Development"
-          ]
-        }
-      },
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "",
-        "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "kukulkanide"
-      }
-    }
+  "author": {
+    "name": "Roberto Villarejo Martínez",
+    "email": "roberto.villarejo@infotec.mx"
   },
+  "license": "MIT",
   "dependencies": {
     "@theia/core": "latest",
     "@theia/editor": "latest",
@@ -72,8 +34,6 @@
     "@theia/terminal": "latest",
     "@theia/typescript": "latest",
     "@theia/workspace": "latest",
-    "electron-compile": "6.4.2",
-    "electron-squirrel-startup": "1.0.0",
     "kukulkan-extension": "0.0.0"
   },
   "devDependencies": {
@@ -82,8 +42,7 @@
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "electron-builder": "^20.4.1",
-    "electron-forge": "5.1.1",
-    "electron-prebuilt-compile": "1.8.2",
+    "electron-rebuild": "1.7.3",
     "eslint": "^3",
     "eslint-config-airbnb": "^15",
     "eslint-plugin-import": "^2",
