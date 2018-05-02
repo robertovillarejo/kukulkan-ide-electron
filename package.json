@@ -1,6 +1,5 @@
 {
   "name": "kukulkan-ide",
-  "private": true,
   "productName": "kukulkan-ide",
   "version": "0.0.1",
   "description": "The Kukulkan IDE",
@@ -34,7 +33,7 @@
     "@theia/terminal": "latest",
     "@theia/typescript": "latest",
     "@theia/workspace": "latest",
-    "kukulkan-extension": "0.0.0"
+    "kukulkan-extension": "https://github.com/robertovillarejo/kukulkan-theia-extension.git"
   },
   "devDependencies": {
     "@theia/cli": "latest",
@@ -47,13 +46,9 @@
     "eslint-config-airbnb": "^15",
     "eslint-plugin-import": "^2",
     "eslint-plugin-jsx-a11y": "^5",
-    "eslint-plugin-react": "^7",
-    "lerna": "^2.2.0"
+    "eslint-plugin-react": "^7"
   },
   "theia": {
     "target": "electron"
-  },
-  "workspaces": [
-    "kukulkan-extension"
-  ]
+  }
 }
